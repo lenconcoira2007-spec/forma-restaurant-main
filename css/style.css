@@ -557,3 +557,20 @@ a:focus-visible {
     background-size: cover;
     background-position: center;
 }
+/* Улучшение мобильной версии */
+
+@media (max-width: 700px) {
+    /* Скрываем декоративную фотографию,
+       чтобы она не перекрывала текст и кнопки */
+    .hero::after {
+        display: none;
+    }
+
+    /* Располагаем навигацию в три колонки */
+    .main-nav {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        align-items: center;
+        gap: 8px 16px;
+    }
+}
