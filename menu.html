@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Меню FORMA Restaurant & Bistro — блюда, десерты и напитки в Бельцах.">
+    <title>Меню | FORMA Restaurant & Bistro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="FORMA — главная">
+            FORMA<span>.</span>
+            <small>RESTAURANT & BISTRO</small>
+        </a>
+
+        <nav class="main-nav" aria-label="Главная навигация">
+            <a href="index.html" data-i18n="home">Главная</a>
+            <a href="about.html" data-i18n="about">О нас</a>
+            <a href="menu.html" data-i18n="menu">Меню</a>
+            <a href="gallery.html" data-i18n="gallery">Галерея</a>
+            <a href="booking.html" data-i18n="booking">Бронирование</a>
+            <a href="contacts.html" data-i18n="contacts">Контакты</a>
+        </nav>
+
+        <div class="language-switcher" aria-label="Выбор языка">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="ro">RO</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </header>
+
+    <main class="menu-page">
+        <section class="menu-hero">
+            <p class="eyebrow" data-i18n="menuPageEyebrow">
+                ВКУС • КАЧЕСТВО • УДОВОЛЬСТВИЕ
+            </p>
+
+            <h1 data-i18n="menuPageTitle">Наше меню</h1>
+
+            <p class="menu-intro" data-i18n="menuPageDescription">
+                Откройте для себя блюда, приготовленные с вниманием
+                к ингредиентам, вкусу и каждой детали.
+            </p>
+
+            <div class="menu-decoration">FORMA / MENU</div>
+        </section>
+
+        <section class="menu-catalog section">
+            <div class="section-label">
+                <span>01 /</span>
+                <p data-i18n="menuCatalogLabel">Выберите что-то особенное</p>
+            </div>
+
+            <div class="menu-filters" aria-label="Категории меню">
+                <button class="menu-filter active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true"
+                        data-i18n="menuFilterAll">Всё меню</button>
+
+                <button class="menu-filter"
+                        type="button"
+                        data-filter="starters"
+                        aria-pressed="false"
+                        data-i18n="menuFilterStarters">Закуски</button>
+
+                <button class="menu-filter"
+                        type="button"
+                        data-filter="mains"
+                        aria-pressed="false"
+                        data-i18n="menuFilterMains">Основные блюда</button>
+
+                <button class="menu-filter"
+                        type="button"
+                        data-filter="desserts"
+                        aria-pressed="false"
+                        data-i18n="menuFilterDesserts">Десерты</button>
+
+                <button class="menu-filter"
+                        type="button"
+                        data-filter="drinks"
+                        aria-pressed="false"
+                        data-i18n="menuFilterDrinks">Напитки</button>
+            </div>
+
+            <div class="menu-grid">
+                <article class="menu-card" data-category="starters">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+                            alt="Свежий салат с овощами"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagStarter">Закуска</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish1Name">Салат с сезонными овощами</h3>
+                            <span class="menu-price">125 MDL</span>
+                        </div>
+                        <p data-i18n="dish1Description">
+                            Свежие овощи, зелень и лёгкая заправка.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="starters">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=800&q=85"
+                            alt="Брускетты с томатами"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagStarter">Закуска</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish2Name">Брускетты с томатами</h3>
+                            <span class="menu-price">85 MDL</span>
+                        </div>
+                        <p data-i18n="dish2Description">
+                            Хрустящий хлеб, томаты, базилик и оливковое масло.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=85"
+                            alt="Паста с овощами и зеленью"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagMain">Основное блюдо</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish3Name">Паста с томатным соусом</h3>
+                            <span class="menu-price">155 MDL</span>
+                        </div>
+                        <p data-i18n="dish3Description">
+                            Паста, томатный соус, травы и тёртый сыр.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="mains">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=85"
+                            alt="Приготовленное мясное блюдо"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagMain">Основное блюдо</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish4Name">Мясо на гриле</h3>
+                            <span class="menu-price">195 MDL</span>
+                        </div>
+                        <p data-i18n="dish4Description">
+                            Сочное мясо с гарниром и фирменным соусом.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85"
+                            alt="Шоколадный торт"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagDessert">Десерт</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish5Name">Шоколадный торт</h3>
+                            <span class="menu-price">90 MDL</span>
+                        </div>
+                        <p data-i18n="dish5Description">
+                            Нежный шоколадный десерт с насыщенным вкусом какао.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="desserts">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=85"
+                            alt="Десерт с ягодами и кремом"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagDessert">Десерт</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish6Name">Йогуртовый десерт с ягодами</h3>
+                            <span class="menu-price">75 MDL</span>
+                        </div>
+                        <p data-i18n="dish6Description">
+                            Лёгкий крем, сезонные ягоды и хрустящая крошка.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1555949366-819808d99159?auto=format&fit=crop&w=800&q=85"
+                            alt="Освежающий фруктовый напиток"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagDrink">Напиток</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish7Name">Домашний лимонад</h3>
+                            <span class="menu-price">55 MDL</span>
+                        </div>
+                        <p data-i18n="dish7Description">
+                            Лимон, мята, лёд и свежие фрукты.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=85"
+                            alt="Чашка свежесваренного кофе"
+                            loading="lazy">
+                        <span class="menu-tag" data-i18n="menuTagDrink">Напиток</span>
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-heading">
+                            <h3 data-i18n="dish8Name">Кофе</h3>
+                            <span class="menu-price">45 MDL</span>
+                        </div>
+                        <p data-i18n="dish8Description">
+                            Ароматный кофе, приготовленный перед подачей.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <p class="menu-note" data-i18n="menuNote">
+                Изображения и цены представлены как демонстрационный вариант меню.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo footer-logo" href="index.html">
+            FORMA<span>.</span>
+            <small>RESTAURANT & BISTRO</small>
+        </a>
+
+        <p data-i18n="footerLocation">Бельцы, Республика Молдова</p>
+
+        <p>© <span id="current-year">2026</span> FORMA Restaurant & Bistro</p>
+    </footer>
+</body>
+</html>
