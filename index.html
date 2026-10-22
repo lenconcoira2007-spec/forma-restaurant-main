@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="FORMA Restaurant & Bistro — ресторан современной кухни в Бельцах.">
+    <title>FORMA Restaurant & Bistro | Bălți</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="FORMA — главная">
+            FORMA<span>.</span>
+            <small>RESTAURANT & BISTRO</small>
+        </a>
+
+        <nav class="main-nav" aria-label="Главная навигация">
+            <a href="index.html" data-i18n="home">Главная</a>
+            <a href="about.html" data-i18n="about">О нас</a>
+            <a href="menu.html" data-i18n="menu">Меню</a>
+            <a href="gallery.html" data-i18n="gallery">Галерея</a>
+            <a href="booking.html" data-i18n="booking">Бронирование</a>
+            <a href="contacts.html" data-i18n="contacts">Контакты</a>
+        </nav>
+
+        <div class="language-switcher" aria-label="Выбор языка">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="ro">RO</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow" data-i18n="eyebrow">
+                    РЕСТОРАН • БЕЛЬЦЫ • МОЛДОВА
+                </p>
+
+                <h1 data-i18n="heroTitle">
+                    Вкус, который<br>создаёт атмосферу.
+                </h1>
+
+                <p class="hero-description" data-i18n="heroDescription">
+                    Современная кухня, уютная атмосфера
+                    и моменты, которыми хочется делиться.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary"
+                       href="menu.html"
+                       data-i18n="viewMenu">
+                        Посмотреть меню
+                    </a>
+
+                    <a class="button button-secondary"
+                       href="booking.html"
+                       data-i18n="bookTable">
+                        Забронировать столик
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-note">
+                <span class="hero-note-number">01</span>
+                <p data-i18n="heroNote">
+                    Хорошая еда. Тёплые встречи. Ваше место.
+                </p>
+            </div>
+        </section>
+
+        <section class="welcome section" id="welcome">
+            <div class="section-label">
+                <span>01 /</span>
+                <p data-i18n="welcomeLabel">Добро пожаловать в FORMA</p>
+            </div>
+
+            <div class="welcome-content">
+                <h2 data-i18n="welcomeTitle">
+                    Пространство для<br>
+                    приятных моментов.
+                </h2>
+
+                <div class="welcome-text">
+                    <p data-i18n="welcomeDescription">
+                        FORMA Restaurant & Bistro — место,
+                        где встречаются вкус, стиль и гостеприимство.
+                        Мы создаём атмосферу для неспешных обедов,
+                        встреч с друзьями и особенных вечеров.
+                    </p>
+
+                    <a class="text-link"
+                       href="about.html"
+                       data-i18n="learnMore">
+                        Больше о нас →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section">
+            <div class="section-label">
+                <span>02 /</span>
+                <p data-i18n="experienceLabel">Почему FORMA</p>
+            </div>
+
+            <div class="experience-grid">
+                <article class="experience-card">
+                    <span class="card-number">01</span>
+                    <h3 data-i18n="featureOneTitle">Вкусная кухня</h3>
+                    <p data-i18n="featureOneText">
+                        Внимание к ингредиентам, вкусу и каждой детали.
+                    </p>
+                </article>
+
+                <article class="experience-card">
+                    <span class="card-number">02</span>
+                    <h3 data-i18n="featureTwoTitle">Уютная атмосфера</h3>
+                    <p data-i18n="featureTwoText">
+                        Пространство, в котором приятно проводить время.
+                    </p>
+                </article>
+
+                <article class="experience-card">
+                    <span class="card-number">03</span>
+                    <h3 data-i18n="featureThreeTitle">Особые встречи</h3>
+                    <p data-i18n="featureThreeText">
+                        Поводы собраться вместе и создать воспоминания.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="reservation-banner">
+            <div>
+                <p class="eyebrow" data-i18n="reservationEyebrow">
+                    ВАШ СЛЕДУЮЩИЙ ПРИЯТНЫЙ ВЕЧЕР
+                </p>
+                <h2 data-i18n="reservationTitle">
+                    Будем рады вас видеть.
+                </h2>
+            </div>
+
+            <a class="button button-primary"
+               href="booking.html"
+               data-i18n="reservationButton">
+                Забронировать столик
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo footer-logo" href="index.html">
+            FORMA<span>.</span>
+            <small>RESTAURANT & BISTRO</small>
+        </a>
+
+        <p data-i18n="footerLocation">Бельцы, Республика Молдова</p>
+
+        <p>
+            © <span id="current-year">2026</span>
+            FORMA Restaurant & Bistro
+        </p>
+    </footer>
+</body>
+</html>
