@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Галерея FORMA Restaurant & Bistro — кухня, десерты и атмосфера ресторана в Бельцах.">
+
+    <title>Галерея | FORMA Restaurant & Bistro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <script src="js/script.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="FORMA — главная">
+            FORMA<span>.</span>
+            <small>RESTAURANT & BISTRO</small>
+        </a>
+
+        <nav class="main-nav" aria-label="Главная навигация">
+            <a href="index.html" data-i18n="home">Главная</a>
+            <a href="about.html" data-i18n="about">О нас</a>
+            <a href="menu.html" data-i18n="menu">Меню</a>
+            <a href="gallery.html" data-i18n="gallery">Галерея</a>
+            <a href="booking.html" data-i18n="booking">Бронирование</a>
+            <a href="contacts.html" data-i18n="contacts">Контакты</a>
+        </nav>
+
+        <div class="language-switcher" aria-label="Выбор языка">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="ro">RO</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </header>
+
+    <main class="gallery-page">
+        <section class="gallery-hero">
+            <p class="eyebrow" data-i18n="galleryEyebrow">
+                МОМЕНТЫ • ВКУС • АТМОСФЕРА
+            </p>
+
+            <h1 data-i18n="galleryTitle">Галерея FORMA</h1>
+
+            <p class="gallery-intro" data-i18n="galleryDescription">
+                Взгляните на детали, которые создают особенную атмосферу
+                нашего ресторана: красивые блюда, десерты и тёплые встречи.
+            </p>
+
+            <span class="gallery-decoration" aria-hidden="true">
+                FORMA / MOMENTS
+            </span>
+        </section>
+
+        <section class="gallery-content section">
+            <div class="section-label">
+                <span>01 /</span>
+                <p data-i18n="gallerySectionLabel">
+                    Истории в каждом кадре
+                </p>
+            </div>
+
+            <div class="gallery-filters" aria-label="Категории галереи">
+                <button
+                    class="gallery-filter active"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true"
+                    data-i18n="galleryFilterAll">
+                    Все фотографии
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    type="button"
+                    data-filter="ambience"
+                    aria-pressed="false"
+                    data-i18n="galleryFilterAmbience">
+                    Атмосфера
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    type="button"
+                    data-filter="dishes"
+                    aria-pressed="false"
+                    data-i18n="galleryFilterDishes">
+                    Блюда
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    type="button"
+                    data-filter="desserts"
+                    aria-pressed="false"
+                    data-i18n="galleryFilterDesserts">
+                    Десерты
+                </button>
+
+                <button
+                    class="gallery-filter"
+                    type="button"
+                    data-filter="drinks"
+                    aria-pressed="false"
+                    data-i18n="galleryFilterDrinks">
+                    Напитки
+                </button>
+            </div>
+
+            <div class="gallery-grid">
+                <figure class="gallery-item" data-category="ambience">
+                    <div class="gallery-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                            alt="Подача блюда в ресторанной атмосфере"
+                            loading="lazy">
+                        <span class="gallery-image-number">01</span>
+                    </div>
+
+                    <figcaption>
+                        <h3 data-i18n="galleryImage1Title">
+                            Атмосфера FORMA
+                        </h3>
+                        <p data-i18n="galleryImage1Description">
+                            Внимание к деталям и красивая подача.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="dishes">
+                    <div class="gallery-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                            alt="Салат со свежими сезонными овощами"
+                            loading="lazy">
+                        <span class="gallery-image-number">02</span>
+                    </div>
+
+                    <figcaption>
+                        <h3 data-i18n="galleryImage2Title">
+                            Свежие ингредиенты
+                        </h3>
+                        <p data-i18n="galleryImage2Description">
+                            Цвет, свежесть и натуральный вкус.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="dishes">
+                    <div class="gallery-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=1000&q=85"
+                            alt="Брускетты с томатами и зеленью"
+                            loading="lazy">
+                        <span class="gallery-image-number">03</span>
+                    </div>
+
+                    <figcaption>
+                        <h3 data-i18n="galleryImage3Title">
+                            Маленькие удовольствия
+                        </h3>
+                        <p data-i18n="galleryImage3Description">
+                            Закуски, приготовленные с заботой.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="dishes">
+                    <div class="gallery-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85"
+                            alt="Паста с овощами и зеленью"
+                            loading="lazy">
+                        <span class="gallery-image-number">04</span>
+                    </div>
+
+                    <figcaption>
+                        <h3 data-i18n="galleryImage4Title">
+                            Вкус в деталях
+                        </h3>
+                        <p data-i18n="galleryImage4Description">
+                            Гармония вкуса и оформления.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="dishes">
+                    <div class="gallery-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85"
+                            alt="Мясное блюдо на тарелке"
+                            loading="lazy">
+                        <span class="gallery-image-number">05</span>
+                    </div>
+
+                    <figcaption>
+                        <h3 data-i18n="galleryImage5Title">
+                            Кулинарное мастерство
+                        </h3>
+                        <p data-i18n="galleryImage5Description">
+                            Вкус, текстура и продуманная подача.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="desserts">
+                    <div class="gallery-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85"
+                            alt="Шоколадный торт"
+                            loading="lazy">
+                        <span class="gallery-image-number">06</span>
+                    </div>
+
+                    <figcaption>
+                        <h3 data-i18n="galleryImage6Title">
+                            Сладкий момент
+                                            </h3>
+                    <p data-i18n="galleryImage6Description">
+                        Десерт для особенного настроения.
+                    </p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="desserts">
+                <div class="gallery-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1000&q=85"
+                        alt="Десерт с йогуртом и ягодами"
+                        loading="lazy">
+                    <span class="gallery-image-number">07</span>
+                </div>
+
+                <figcaption>
+                    <h3 data-i18n="galleryImage7Title">
+                        Ягодная нежность
+                    </h3>
+                    <p data-i18n="galleryImage7Description">
+                        Лёгкий десерт с ягодами.
+                    </p>
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="drinks">
+                <div class="gallery-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85"
+                        alt="Чашка свежесваренного кофе"
+                        loading="lazy">
+                    <span class="gallery-image-number">08</span>
+                </div>
+
+                <figcaption>
+                    <h3 data-i18n="galleryImage8Title">
+                        Кофейная пауза
+                    </h3>
+                    <p data-i18n="galleryImage8Description">
+                        Ароматный кофе и спокойные моменты.
+                    </p>
+                </figcaption>
+            </figure>
+        </div>
+
+        <p class="gallery-note" data-i18n="galleryNote">
+            Фотографии используются для демонстрации дизайна галереи.
+        </p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <a class="logo footer-logo" href="index.html">
+        FORMA<span>.</span>
+        <small>RESTAURANT & BISTRO</small>
+    </a>
+
+    <p data-i18n="footerLocation">Бельцы, Республика Молдова</p>
+
+    <p>
+        © <span id="current-year">2026</span>
+        FORMA Restaurant & Bistro
+    </p>
+</footer>
+
+</body>
+</html>
