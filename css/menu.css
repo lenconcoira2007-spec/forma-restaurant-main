@@ -1,0 +1,263 @@
+/* =====================================
+   FORMA Restaurant & Bistro — Menu
+===================================== */
+
+.menu-page {
+    overflow: hidden;
+}
+
+.menu-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 8% 90px;
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(200, 139, 97, 0.25),
+            transparent 30%
+        ),
+        linear-gradient(120deg, #24372e, #405443);
+    color: #fffdf8;
+}
+
+.menu-hero h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 7vw, 82px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.menu-intro {
+    position: relative;
+    z-index: 1;
+    max-width: 550px;
+    margin: 25px 0 0;
+    color: rgba(255, 253, 248, 0.82);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.menu-decoration {
+    position: absolute;
+    right: 7%;
+    bottom: 25px;
+    color: rgba(255, 253, 248, 0.15);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(35px, 6vw, 80px);
+    letter-spacing: 5px;
+    white-space: nowrap;
+}
+
+.menu-catalog {
+    padding-top: 75px;
+}
+
+.menu-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.menu-filter {
+    padding: 11px 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 12px;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.menu-filter:hover,
+.menu-filter.active {
+    border-color: var(--color-dark);
+    background: var(--color-dark);
+    color: #fffdf8;
+}
+
+.menu-filter:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 22px;
+}
+
+.menu-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(36, 55, 46, 0.09);
+}
+
+.menu-card[hidden] {
+    display: none;
+}
+
+.menu-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #e9e5d9;
+}
+
+.menu-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.04);
+}
+
+.menu-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 7px 10px;
+    background: rgba(255, 253, 248, 0.94);
+    color: var(--color-dark);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.menu-card-content {
+    padding: 21px 19px 23px;
+}
+
+.menu-card-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.menu-card-heading h3 {
+    margin: 0;
+    color: var(--color-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+.menu-price {
+    flex-shrink: 0;
+    color: var(--color-green);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.menu-card-content p {
+    margin: 14px 0 0;
+    color: var(--color-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.menu-note {
+    margin: 28px 0 0;
+    color: var(--color-muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* Адаптивность */
+
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-hero {
+        padding: 80px 7%;
+    }
+
+    .menu-decoration {
+        right: 5%;
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu-hero {
+        padding: 65px 7% 75px;
+    }
+
+    .menu-hero h1 {
+        font-size: 48px;
+    }
+
+    .menu-intro {
+        font-size: 13px;
+    }
+
+    .menu-decoration {
+        right: 7%;
+        bottom: 15px;
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .menu-catalog {
+        padding-top: 55px;
+    }
+
+    .menu-filters {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+
+    .menu-filter {
+        padding: 10px 12px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .menu-image {
+        aspect-ratio: 5 / 3;
+    }
+
+    .menu-card-content {
+        padding: 18px;
+    }
+
+    .menu-card-heading h3 {
+        font-size: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-card,
+    .menu-image img,
+    .menu-filter {
+        transition: none;
+    }
+}
