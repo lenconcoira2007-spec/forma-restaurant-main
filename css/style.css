@@ -388,4 +388,172 @@ a:focus-visible {
     align-items: center;
     justify-content: space-between;
     gap: 35px;
-    margin: 
+        margin: 0 auto 80px;
+    padding: 65px max(8%, calc((100% - 1040px) / 2));
+    background: #e9e5d9;
+}
+
+.reservation-banner .eyebrow {
+    margin-bottom: 15px;
+}
+
+.reservation-banner h2 {
+    font-size: clamp(30px, 4vw, 45px);
+}
+
+.reservation-banner .button {
+    flex-shrink: 0;
+}
+
+/* Подвал сайта */
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 34px 7%;
+    background: var(--color-dark);
+    color: rgba(255, 253, 248, 0.75);
+    font-size: 11px;
+}
+
+.footer-logo {
+    color: #fffdf8;
+    font-size: 25px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Адаптация под планшеты */
+
+@media (max-width: 1050px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px 22px;
+    }
+
+    .welcome-content {
+        gap: 35px;
+    }
+
+    .hero::after {
+        right: -100px;
+    }
+}
+
+/* Адаптация под телефоны */
+
+@media (max-width: 700px) {
+    .site-header {
+        padding: 20px 6%;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .main-nav {
+        gap: 8px 16px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 75px 7% 120px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 57px);
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero::after {
+        top: 15%;
+        right: -185px;
+        opacity: 0.7;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .welcome-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card {
+        min-height: 180px;
+    }
+
+    .experience-card h3 {
+        margin-top: 17px;
+    }
+
+    .reservation-banner {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 50px;
+        padding: 50px 7%;
+    }
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        padding: 35px 7%;
+    }
+}
+
+/* Учитываем настройки уменьшения анимации */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Фотография на главном экране */
+
+.hero::after {
+    background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85");
+    background-size: cover;
+    background-position: center;
+}
