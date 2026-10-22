@@ -1,0 +1,364 @@
+
+/* ========================================
+   FORMA Restaurant & Bistro
+   Стили страницы бронирования
+======================================== */
+
+/* Верхний блок */
+
+.booking-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+    align-items: center;
+    gap: 45px;
+    min-height: 440px;
+    padding: 75px max(8%, calc((100% - 1120px) / 2));
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(200, 139, 97, 0.28),
+            transparent 30%
+        ),
+        linear-gradient(120deg, #24372e, #344a3c 72%, #56644d);
+    color: var(--color-surface);
+}
+
+.booking-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.booking-hero .eyebrow {
+    margin-bottom: 22px;
+}
+
+.booking-hero h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 5.2vw, 66px);
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    line-height: 1.12;
+}
+
+.booking-lead {
+    max-width: 490px;
+    margin: 24px 0 0;
+    color: rgba(255, 253, 248, 0.82);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Декоративный знак */
+
+.booking-hero-mark {
+    display: flex;
+    min-height: 270px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 253, 248, 0.28);
+    border-radius: 160px 160px 8px 8px;
+    color: rgba(255, 253, 248, 0.92);
+}
+
+.booking-hero-mark span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(120px, 16vw, 190px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.booking-hero-mark p {
+    margin: 18px 0 0;
+    color: var(--color-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* Основная секция */
+
+.booking-section {
+    padding-top: 85px;
+    padding-bottom: 100px;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: 65px;
+}
+
+/* Информационный блок */
+
+.booking-info {
+    padding-top: 15px;
+}
+
+.booking-mini-label {
+    margin: 0 0 16px;
+    color: var(--color-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.booking-info h2 {
+    margin: 0 0 22px;
+    color: var(--color-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3.5vw, 45px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.booking-info > p:not(.booking-mini-label) {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.booking-info-note {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin: 30px 0;
+    padding: 20px;
+    border-left: 2px solid var(--color-accent);
+    background: #eeeadf;
+}
+
+.booking-info-number {
+    color: var(--color-accent);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+.booking-info-note p {
+    margin: 0;
+    color: var(--color-dark);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Панель формы */
+
+.booking-form-panel {
+    min-width: 0;
+    padding: 36px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    box-shadow: 0 12px 35px rgba(36, 55, 46, 0.045);
+}
+
+.booking-form-heading {
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.booking-form-heading .booking-mini-label {
+    margin-bottom: 8px;
+}
+
+.booking-form-heading h2 {
+    margin: 0 0 10px;
+    color: var(--color-dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 3vw, 36px);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.booking-form-heading > p:last-child {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Поля ввода */
+
+.booking-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 21px;
+}
+
+.booking-field-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.booking-field label {
+    color: var(--color-dark);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 47px;
+    padding: 12px 13px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    background: #fffefa;
+    color: var(--color-text);
+    font: inherit;
+    font-size: 13px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.booking-field input::placeholder,
+.booking-field textarea::placeholder {
+    color: #92958d;
+    opacity: 1;
+}
+
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+    border-color: var(--color-green);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(72, 102, 83, 0.12);
+}
+
+.booking-field input:focus-visible,
+.booking-field select:focus-visible,
+.booking-field textarea:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.booking-field textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.booking-submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form-notice {
+    margin: 16px 0 0;
+    color: var(--color-green);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.booking-form-notice:empty {
+    display: none;
+}
+
+/* Адаптация под планшеты */
+
+@media (max-width: 900px) {
+    .booking-hero {
+        grid-template-columns: minmax(0, 1fr) minmax(150px, 0.65fr);
+        gap: 25px;
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    .booking-hero-mark {
+        min-height: 230px;
+    }
+
+    .booking-layout {
+        gap: 35px;
+    }
+
+    .booking-form-panel {
+        padding: 27px;
+    }
+}
+
+/* Адаптация под телефоны */
+
+@media (max-width: 700px) {
+    .booking-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 65px 7%;
+    }
+
+    .booking-hero h1 {
+        font-size: clamp(38px, 9.5vw, 54px);
+        letter-spacing: -1px;
+    }
+
+    .booking-lead {
+        font-size: 14px;
+    }
+
+    .booking-hero-mark {
+        display: none;
+    }
+
+    .booking-section {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .booking-info {
+        padding-top: 0;
+    }
+
+    .booking-info h2 {
+        font-size: 36px;
+    }
+
+    .booking-form-panel {
+        padding: 23px 18px;
+    }
+
+    .booking-form-heading h2 {
+        font-size: 29px;
+    }
+
+    .booking-field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .booking-field input,
+    .booking-field select,
+    .booking-field textarea {
+        font-size: 16px;
+    }
+}
+
+/* Учитываем настройки уменьшения анимации */
+
+@media (prefers-reduced-motion: reduce) {
+    .booking-field input,
+    .booking-field select,
+    .booking-field textarea {
+        transition: none;
+    }
+}
