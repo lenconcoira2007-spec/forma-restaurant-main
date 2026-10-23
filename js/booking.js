@@ -46,8 +46,11 @@ const bookingTranslations = {
         bookingSubmit: "Отправить запрос",
 
         bookingSuccess:
-            "Форма заполнена корректно. Это демонстрационный сайт: заявка не отправлена в ресторан."
-    },
+    "Форма заполнена корректно. Это демонстрационный сайт: заявка не отправлена в ресторан.",
+bookingValidationError:
+    "Пожалуйста, проверьте обязательные поля и формат телефона."
+},
+
 
     ro: {
         home: "Acasă",
@@ -90,7 +93,9 @@ const bookingTranslations = {
         bookingSubmit: "Trimite solicitarea",
 
         bookingSuccess:
-            "Formularul este completat corect. Acesta este un site demonstrativ: solicitarea nu a fost trimisă restaurantului."
+            "Formularul este completat corect. Acesta este un site demonstrativ: solicitarea nu a fost trimisă restaurantului.",
+bookingValidationError:
+    "Te rugăm să verifici câmpurile obligatorii și formatul numărului de telefon."
     },
 
     en: {
@@ -134,7 +139,9 @@ const bookingTranslations = {
         bookingSubmit: "Submit request",
 
         bookingSuccess:
-            "The form is valid. This is a demo website: the request has not been sent to the restaurant."
+            "The form is valid. This is a demo website: the request has not been sent to the restaurant.",
+bookingValidationError:
+    "Please check the required fields and phone number format."
     }
 };
 
@@ -202,6 +209,15 @@ const bookingForm = document.getElementById("booking-form");
 const bookingNotice = document.getElementById("booking-form-notice");
 
 if (bookingForm && bookingNotice) {
+    bookingForm.addEventListener("invalid", () => {
+        const language =
+            document.documentElement.lang in bookingTranslations
+                ? document.documentElement.lang
+                : "ru";
+
+        bookingNotice.textContent =
+            bookingTranslations[language].bookingValidationError;
+    }, true);
     bookingForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
@@ -233,3 +249,38 @@ if (bookingForm && bookingNotice) {
 /* Устанавливаем русский язык при открытии страницы */
 
 setBookingLanguage("ru");
+/* Проверка формата молдавского номера телефона */
+
+const bookingPhone = document.getElementById("booking-phone");
+
+if (bookingPhone) {
+    function validateBookingPhone() {
+        const phoneValue = bookingPhone.value.trim();
+
+        // Пустое поле проверяется атрибутом required.
+        if (phoneValue === "") {
+            bookingPhone.setCustomValidity("");
+            return;
+        }
+
+        // Разрешаем пробелы, дефисы и скобки внутри номера.
+        const normalizedPhone = phoneValue.replace(/[\s()-]/g, "");
+
+        // Поддерживаем международный формат +373XXXXXXXX
+        // и местный формат 0XXXXXXXX.
+        const isValidPhone = /^(?:\+373\d{8}|0\d{8})$/.test(
+            normalizedPhone
+        );
+
+        if (isValidPhone) {
+            bookingPhone.setCustomValidity("");
+        } else {
+            bookingPhone.setCustomValidity(
+                "Введите молдавский номер в формате +373XXXXXXXX или 0XXXXXXXX."
+            );
+        }
+    }
+
+    bookingPhone.addEventListener("input", validateBookingPhone);
+    bookingPhone.addEventListener("blur", validateBookingPhone);
+}
